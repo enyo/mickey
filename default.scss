@@ -24,8 +24,16 @@ html, body {
 }
 
 body {
-  background: url('dash.png') repeat center;
-  background-size: $hash-width $hash-height;
+  background: url('dash_32.png') repeat center;
+
+  @media (min-width: 600px) {
+    background-image: url('dash_40.png');
+  }
+  @media (min-width: 1066px) {
+    background-image: url('dash_60.png');
+  }
+
+
   font-family: 'Indie Flower', cursive;
   display: flex;
   align-items: center;
