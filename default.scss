@@ -1,0 +1,100 @@
+---
+---
+
+$hash-width: 1.4rem;
+$hash-height: 2rem;
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1066px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url('dash.png') repeat center;
+  background-size: $hash-width $hash-height;
+  font-family: 'Indie Flower', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 auto;
+  font-size: 6rem;
+  width: 12 * $hash-width;
+  height: 4 * $hash-height;
+  // Adjust the line-height so the "y" of Mickey doesn't stick out
+  line-height: 6rem;
+  background: white;
+}
+
+nav {
+  display: block;
+  margin-top: 2 * $hash-height;
+  a {
+    display: block;
+    height: $hash-height;
+    font-size: 1.5rem;
+    color: #337ab7;
+    background: white;
+    margin: $hash-height auto 0 auto;
+
+    &.soundcloud {
+      // Since they are centered, they need an uneven number, not to cut off hashtags
+      width: 7 * $hash-width;
+    }
+
+    &.facebook {
+      width: 5 * $hash-width;
+    }
+
+    &.twitter {
+      width: 5 * $hash-width;
+    }
+
+    &.instagram {
+      width: 5 * $hash-width;
+    }
+  }
+
+  @media (min-width: 660px) {
+    margin-top: $hash-height;
+    a {
+      float: left;
+
+      &.soundcloud {
+        width: 6 * $hash-width;
+      }
+      &.twitter {
+        width: 4 * $hash-width;
+      }
+
+
+      &:not(:last-child) {
+        // Give all links a right margin, except for the last one
+        margin-right: $hash-width;
+      }
+    }
+  }
+}
+
