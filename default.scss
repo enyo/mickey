@@ -94,6 +94,9 @@ nav {
     vertical-align: bottom;
     color: black;
     background: white;
+    &:hover {
+      border-bottom: 4px solid black;
+    }
     &:not(:last-child) {
       // Give all links a right margin, except for the last one
       margin-right: 2 * $hash-width;
